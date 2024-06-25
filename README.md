@@ -1,4 +1,4 @@
-# CashRegister
+# Cash Register App
 
 Assumptions:
 1) Calculated random items cost.
