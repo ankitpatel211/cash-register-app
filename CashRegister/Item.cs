@@ -175,7 +175,7 @@ namespace CashRegister
 
         public enum discountTypes
         {
-            Percentage = 1 ,
+            Percentage = 1,
             BuyXGetYFree = 2
         }
 
