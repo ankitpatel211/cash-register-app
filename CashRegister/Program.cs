@@ -28,14 +28,14 @@ namespace CashRegister
             }
             double totalItemCost = item.calculateTotalOfAllItems(listOfItems);
             Console.WriteLine("-----------------------Invoice-------------------------");
-            Console.WriteLine("Name\t\tQty\t\tfreeQty\t\tDiscountType\t\tCost");
+            Console.WriteLine("Name\tQty\tfreeQty\tDiscountType\tCost");
             foreach (var eachItem in listOfItems)
             {
-                Console.WriteLine("{0}\t\t{1}\t\t{2}\t\t{3}\t\t{4}", eachItem.Name, eachItem.Qty, eachItem.FreeItemQty.ToString().Trim(),
+                Console.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}", eachItem.Name, eachItem.Qty, eachItem.FreeItemQty.ToString().Trim(),
                     (eachItem.TypeOfDiscount == 1) ? discountTypes.Percentage.ToString() : discountTypes.BuyXGetYFree.ToString(), "$" + eachItem.Cost.ToString("n2"));
             }
             Console.WriteLine("--------------------------------------------------------");
-            Console.WriteLine("\t\t\t\t\tTotal:{0}", "$" + totalItemCost.ToString("n2"));
+            Console.WriteLine("\t\t\t\tTotal:{0}", "$" + totalItemCost.ToString("n2"));
             Console.WriteLine("--------------------------------------------------------");
             Console.ReadKey();
         }
